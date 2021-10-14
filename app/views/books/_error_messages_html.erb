@@ -1,0 +1,9 @@
+  <% if pbj.errors.any? %>
+  <div class="alert alert-warning">
+    <ul>
+      <% obj.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    </ul>
+    <% end %>
+    </div>
+<% end %>
