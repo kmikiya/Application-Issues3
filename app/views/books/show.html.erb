@@ -51,17 +51,18 @@
          <% end %>
         </tr>
       </table>
-      </div>
 
       <table>
-
-<tr>
+      <tr>
 <%= form_with model:[@book, @book_comment], local: true do |f| %>
-  <%= f.text_area :comment %>
+  <%= f.text_area :comment, class: 'form-control book_body' %>
   <%= f.submit "送信する" %>
 <% end %>
 </tr>
 </table>
+      </div>
+
+
   </div>
 </div>
 
