@@ -11,10 +11,12 @@
 	  </tr>
 
 	  <tr>
-        <th>follows:<%= link_to user_followings_path(user.id) do %>
+        <th>follows:</th><th><%= link_to user_followings_path(user.id) do %>
 	      <%= user.followings.count %>
-	     <% end %></th><br>
-	     <th>followers:<%= link_to user_followers_path(user.id) do %>
+	     <% end %></th>
+	  </tr>
+	  <tr>
+	     <th>followers:</th><th><%= link_to user_followers_path(user.id) do %>
          <%= user.followers.count %>
         <% end %></th>
     </tr>
@@ -25,7 +27,8 @@
       <% else %>
       <%= link_to "フォローする", user_relationships_path(user.id), method: :post, class: "btn btn-info btn-block" %>
     <% end %>
-  <% end %></th>
+  <% end %>
+  </th>
 </table>
 
 <div class='row'>
